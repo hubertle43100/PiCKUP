@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "pickupIcon.png",
       "idiom" : "universal"
     }
   ],
