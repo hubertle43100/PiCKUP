@@ -7,19 +7,16 @@
 
 import UIKit
 import FirebaseAuth
-import GoogleSignIn
 
 class LoginViewController: UIViewController {
   
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet var signInButton: GIDSignInButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
 
     }
     
