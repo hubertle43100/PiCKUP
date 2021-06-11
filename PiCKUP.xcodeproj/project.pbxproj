@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		561FE4EA266D318300E117D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4E9266D318300E117D0 /* AppDelegate.swift */; };
 		561FE4EC266D318300E117D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4EB266D318300E117D0 /* SceneDelegate.swift */; };
-		561FE4EE266D318300E117D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4ED266D318300E117D0 /* ViewController.swift */; };
 		561FE4F1266D318300E117D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4EF266D318300E117D0 /* Main.storyboard */; };
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
 		561FE4F6266D318400E117D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F4266D318400E117D0 /* LaunchScreen.storyboard */; };
+		56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF972672CE000087D5EC /* LoginViewController.swift */; };
+		56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF992672D27A0087D5EC /* RegisterViewController.swift */; };
+		56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */; };
+		BE3129F72C263B5FEE0BB0F5 /* Pods_PiCKUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.release.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.release.xcconfig"; sourceTree = "<group>"; };
 		561FE4E6266D318300E117D0 /* PiCKUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiCKUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561FE4E9266D318300E117D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561FE4EB266D318300E117D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		561FE4ED266D318300E117D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		561FE4F0266D318300E117D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F5266D318400E117D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56FFAF972672CE000087D5EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56FFAF992672D27A0087D5EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiCKUP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0FF5F497D04E01C66A9ABA0 /* Pods-PiCKUP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.debug.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3129F72C263B5FEE0BB0F5 /* Pods_PiCKUP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42EE005F676097410E2C140F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0FF5F497D04E01C66A9ABA0 /* Pods-PiCKUP.debug.xcconfig */,
+				36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		52916735E3BD33E580BC6DEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		561FE4DD266D318300E117D0 = {
 			isa = PBXGroup;
 			children = (
 				561FE4E8266D318300E117D0 /* PiCKUP */,
 				561FE4E7266D318300E117D0 /* Products */,
+				42EE005F676097410E2C140F /* Pods */,
+				52916735E3BD33E580BC6DEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +84,11 @@
 		561FE4E8266D318300E117D0 /* PiCKUP */ = {
 			isa = PBXGroup;
 			children = (
+				56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */,
 				561FE4E9266D318300E117D0 /* AppDelegate.swift */,
 				561FE4EB266D318300E117D0 /* SceneDelegate.swift */,
-				561FE4ED266D318300E117D0 /* ViewController.swift */,
+				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
+				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
 				561FE4EF266D318300E117D0 /* Main.storyboard */,
 				561FE4F2266D318400E117D0 /* Assets.xcassets */,
 				561FE4F4266D318400E117D0 /* LaunchScreen.storyboard */,
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 561FE4FA266D318400E117D0 /* Build configuration list for PBXNativeTarget "PiCKUP" */;
 			buildPhases = (
+				0FA73804364C8916E4E94FA2 /* [CP] Check Pods Manifest.lock */,
 				561FE4E2266D318300E117D0 /* Sources */,
 				561FE4E3266D318300E117D0 /* Frameworks */,
 				561FE4E4266D318300E117D0 /* Resources */,
+				1C8FABFEC3B012D01C8EFC01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				561FE4F6266D318400E117D0 /* LaunchScreen.storyboard in Resources */,
+				56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */,
 				561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */,
 				561FE4F1266D318300E117D0 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +165,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FA73804364C8916E4E94FA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiCKUP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C8FABFEC3B012D01C8EFC01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		561FE4E2266D318300E117D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561FE4EE266D318300E117D0 /* ViewController.swift in Sources */,
+				56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */,
+				56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */,
 				561FE4EA266D318300E117D0 /* AppDelegate.swift in Sources */,
 				561FE4EC266D318300E117D0 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +359,7 @@
 		};
 		561FE4FB266D318400E117D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0FF5F497D04E01C66A9ABA0 /* Pods-PiCKUP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +379,7 @@
 		};
 		561FE4FC266D318400E117D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
