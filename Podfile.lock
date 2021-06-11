@@ -1,4 +1,9 @@
 PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - Firebase/Analytics (8.1.0):
     - Firebase/Core
   - Firebase/Auth (8.1.0):
@@ -72,6 +77,10 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.4.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -91,6 +100,9 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.4.1):
     - GoogleUtilities/Logger
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.5.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -102,9 +114,11 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
+  - GoogleSignIn
 
 SPEC REPOS:
   trunk:
+    - AppAuth
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -113,12 +127,15 @@ SPEC REPOS:
     - FirebaseInstallations
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
+    - GTMAppAuth
     - GTMSessionFetcher
     - nanopb
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   Firebase: b5956acddaaa53a6c292bec00649fadd18367344
   FirebaseAnalytics: e812eaae316ba8914b1ef06bef18f11efc1f56c6
   FirebaseAuth: e069ff5736fe9d5dcf61f36244bb1b1ce1897d17
@@ -127,11 +144,13 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 7f31798a8198c354eadcb87176d2090b62edc187
   GoogleAppMeasurement: 9ff7b9e23cced93a5a41736c09bdeb5b5b7fb111
   GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: f826b8be338806823fea3c21b5d6d124ac34b88e
+PODFILE CHECKSUM: 746743ebda8d402bff572d434f384f57ebab9900
 
 COCOAPODS: 1.10.1

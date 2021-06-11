@@ -17,6 +17,7 @@ class ResgisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
     }
 
     @IBAction func registerTapped(_ sender: UIButton) {

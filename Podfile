@@ -8,5 +8,6 @@ target 'PiCKUP' do
   # Pods for PiCKUP
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 end

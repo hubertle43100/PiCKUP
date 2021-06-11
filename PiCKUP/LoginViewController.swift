@@ -7,14 +7,20 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
   
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet var signInButton: GIDSignInButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
@@ -49,6 +55,18 @@ class LoginViewController: UIViewController {
             vc?.modalPresentationStyle = .overFullScreen
             self.present(vc!, animated: true)
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

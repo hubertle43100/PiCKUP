@@ -109,6 +109,7 @@
 				561FE4E3266D318300E117D0 /* Frameworks */,
 				561FE4E4266D318300E117D0 /* Resources */,
 				1C8FABFEC3B012D01C8EFC01 /* [CP] Embed Pods Frameworks */,
+				A9C8ECEEA125AF77BB5665F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +204,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9C8ECEEA125AF77BB5665F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiCKUP/Pods-PiCKUP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
