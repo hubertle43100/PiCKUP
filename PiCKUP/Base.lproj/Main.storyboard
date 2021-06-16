@@ -194,37 +194,88 @@
             </objects>
             <point key="canvasLocation" x="-58" y="83"/>
         </scene>
-        <!--Main Menu-->
-        <scene sceneID="dgq-9f-LMY">
+        <!--ADD-->
+        <scene sceneID="b8M-j7-qBC">
             <objects>
-                <viewController storyboardIdentifier="mainMenu" id="rHa-U7-LGQ" customClass="MainMenu" customModule="PiCKUP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qYR-M0-dzj">
+                <viewController id="6nZ-LM-2DN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pi2-Pe-MGl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vqE-Ds-ME1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ADD" image="icons8-soccer-ball-30" id="fJb-Bl-ThZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsa-tG-f0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2019" y="679"/>
+        </scene>
+        <!--PROFILE-->
+        <scene sceneID="Vbc-Gd-Vo9">
+            <objects>
+                <viewController id="wTg-M5-xqB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZl-SD-cox">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c3S-Wa-ijp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="icons8-soccer-goal-30" id="DMP-cA-RhJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oem-YR-Ae8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2019" y="1369"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="xoH-Qj-iQx">
+            <objects>
+                <viewController id="69I-j0-lnE" customClass="MainMenu" customModule="PiCKUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSU-sh-QmJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="92k-gc-6Ew">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <connections>
-                                    <outlet property="delegate" destination="rHa-U7-LGQ" id="dBV-Ui-hMX"/>
-                                </connections>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JQd-Kn-twm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </mapView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="cQD-Kv-h3g"/>
-                        <color key="backgroundColor" name="B&amp;W"/>
+                        <viewLayoutGuide key="safeArea" id="tZX-KS-vTW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="92k-gc-6Ew" firstAttribute="top" secondItem="cQD-Kv-h3g" secondAttribute="top" id="4mk-oW-wft"/>
-                            <constraint firstItem="cQD-Kv-h3g" firstAttribute="trailing" secondItem="92k-gc-6Ew" secondAttribute="trailing" id="70R-XZ-aDY"/>
-                            <constraint firstItem="cQD-Kv-h3g" firstAttribute="bottom" secondItem="92k-gc-6Ew" secondAttribute="bottom" id="NoM-ZL-iU6"/>
-                            <constraint firstItem="92k-gc-6Ew" firstAttribute="leading" secondItem="cQD-Kv-h3g" secondAttribute="leading" id="c6N-Wx-UGD"/>
+                            <constraint firstItem="tZX-KS-vTW" firstAttribute="trailing" secondItem="JQd-Kn-twm" secondAttribute="trailing" id="GCg-jP-Rhv"/>
+                            <constraint firstItem="tZX-KS-vTW" firstAttribute="bottom" secondItem="JQd-Kn-twm" secondAttribute="bottom" id="RMF-7I-mOh"/>
+                            <constraint firstItem="JQd-Kn-twm" firstAttribute="leading" secondItem="tZX-KS-vTW" secondAttribute="leading" id="aCy-GU-Wtn"/>
+                            <constraint firstItem="JQd-Kn-twm" firstAttribute="top" secondItem="tZX-KS-vTW" secondAttribute="top" id="ovM-3f-qpU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="HOME" image="icons8-stadium-30" id="2q0-HH-3Jg"/>
                     <connections>
-                        <outlet property="mapView" destination="92k-gc-6Ew" id="BvJ-6P-PvB"/>
+                        <outlet property="mapView" destination="JQd-Kn-twm" id="bDZ-lu-6rj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iib-eE-Rjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kb-Q7-KC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="392"/>
+            <point key="canvasLocation" x="2019" y="72"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WKj-ov-249">
+            <objects>
+                <tabBarController storyboardIdentifier="mainMenu" id="CmX-6D-d9d" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0dS-h7-eMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="PastelPink"/>
+                        <color key="selectedImageTintColor" name="PastelPink"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="69I-j0-lnE" kind="relationship" relationship="viewControllers" id="ypd-vk-Add"/>
+                        <segue destination="6nZ-LM-2DN" kind="relationship" relationship="viewControllers" id="47W-4I-xBP"/>
+                        <segue destination="wTg-M5-xqB" kind="relationship" relationship="viewControllers" id="vKe-b0-nhI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1h-Kd-54I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="374"/>
         </scene>
         <!--Resgister View Controller-->
         <scene sceneID="i5X-It-Mpd">
@@ -398,9 +449,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yt3-zU-msj" firstAttribute="top" secondItem="2Bj-oI-kFC" secondAttribute="top" id="13w-Ka-DX5"/>
+                            <constraint firstItem="yt3-zU-msj" firstAttribute="leading" secondItem="2Bj-oI-kFC" secondAttribute="leading" id="7JC-rR-9tT"/>
                             <constraint firstItem="yt3-zU-msj" firstAttribute="leading" secondItem="2Bj-oI-kFC" secondAttribute="leading" id="8aW-o0-xbP"/>
+                            <constraint firstItem="yt3-zU-msj" firstAttribute="bottom" secondItem="2Bj-oI-kFC" secondAttribute="bottom" id="PW2-uH-psU"/>
                             <constraint firstItem="2Bj-oI-kFC" firstAttribute="trailing" secondItem="yt3-zU-msj" secondAttribute="trailing" id="QOv-PH-dZt"/>
+                            <constraint firstItem="yt3-zU-msj" firstAttribute="trailing" secondItem="2Bj-oI-kFC" secondAttribute="trailing" id="dgv-Cn-pH2"/>
                             <constraint firstItem="2Bj-oI-kFC" firstAttribute="bottom" secondItem="yt3-zU-msj" secondAttribute="bottom" id="vZg-gK-n05"/>
+                            <constraint firstItem="yt3-zU-msj" firstAttribute="top" secondItem="2Bj-oI-kFC" secondAttribute="top" id="ydd-YW-tLh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N2a-SR-yFg"/>
@@ -412,11 +467,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIU-QL-zZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="777"/>
+            <point key="canvasLocation" x="-59.598214285714285" y="776.81159420289862"/>
         </scene>
     </scenes>
     <resources>
         <image name="Header" width="200" height="200"/>
+        <image name="icons8-soccer-ball-30" width="30" height="30"/>
+        <image name="icons8-soccer-goal-30" width="30" height="30"/>
+        <image name="icons8-stadium-30" width="30" height="30"/>
         <namedColor name="B&amp;W">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
