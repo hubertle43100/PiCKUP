@@ -10,6 +10,7 @@ import MapKit
 import CoreLocation
 
 class MainMenu: UIViewController {
+    
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
