@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		561FE4EA266D318300E117D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4E9266D318300E117D0 /* AppDelegate.swift */; };
 		561FE4EC266D318300E117D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4EB266D318300E117D0 /* SceneDelegate.swift */; };
-		561FE4F1266D318300E117D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4EF266D318300E117D0 /* Main.storyboard */; };
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
 		561FE4F6266D318400E117D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F4266D318400E117D0 /* LaunchScreen.storyboard */; };
 		56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF972672CE000087D5EC /* LoginViewController.swift */; };
@@ -17,6 +16,7 @@
 		56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */; };
 		56FFAF9E267411CB0087D5EC /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF9D267411CB0087D5EC /* MainMenuController.swift */; };
 		56FFAFA02679B6C30087D5EC /* icons8-home-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9F2679B6C30087D5EC /* icons8-home-64.png */; };
+		56FFAFA2267C765C0087D5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAFA1267C765C0087D5EC /* Main.storyboard */; };
 		BE3129F72C263B5FEE0BB0F5 /* Pods_PiCKUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,6 @@
 		561FE4E6266D318300E117D0 /* PiCKUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiCKUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561FE4E9266D318300E117D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561FE4EB266D318300E117D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		561FE4F0266D318300E117D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F5266D318400E117D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56FFAF9D267411CB0087D5EC /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		56FFAF9F2679B6C30087D5EC /* icons8-home-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-home-64.png"; path = "../../../Downloads/icons8-home-64.png"; sourceTree = "<group>"; };
+		56FFAFA1267C765C0087D5EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiCKUP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FF5F497D04E01C66A9ABA0 /* Pods-PiCKUP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.debug.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
 				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
 				56FFAF9D267411CB0087D5EC /* MainMenuController.swift */,
-				561FE4EF266D318300E117D0 /* Main.storyboard */,
+				56FFAFA1267C765C0087D5EC /* Main.storyboard */,
 				561FE4F2266D318400E117D0 /* Assets.xcassets */,
 				56FFAF9F2679B6C30087D5EC /* icons8-home-64.png */,
 				561FE4F4266D318400E117D0 /* LaunchScreen.storyboard */,
@@ -163,10 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				561FE4F6266D318400E117D0 /* LaunchScreen.storyboard in Resources */,
+				56FFAFA2267C765C0087D5EC /* Main.storyboard in Resources */,
 				56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */,
 				56FFAFA02679B6C30087D5EC /* icons8-home-64.png in Resources */,
 				561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */,
-				561FE4F1266D318300E117D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,14 +230,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		561FE4EF266D318300E117D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				561FE4F0266D318300E117D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		561FE4F4266D318400E117D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
