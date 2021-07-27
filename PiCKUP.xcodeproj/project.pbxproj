@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		561FE4EA266D318300E117D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4E9266D318300E117D0 /* AppDelegate.swift */; };
-		561FE4EC266D318300E117D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE4EB266D318300E117D0 /* SceneDelegate.swift */; };
+		5618087726AC907700480A2E /* addFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5618087626AC907700480A2E /* addFieldController.swift */; };
+		561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A026AF7D1800480A2E /* AppDelegate.swift */; };
+		561808A326AF7D5A00480A2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A126AF7D1800480A2E /* SceneDelegate.swift */; };
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
 		562B0F4B268F8E9A00B46B7E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */; };
 		56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF972672CE000087D5EC /* LoginViewController.swift */; };
@@ -16,16 +17,16 @@
 		56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */; };
 		56FFAF9E267411CB0087D5EC /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF9D267411CB0087D5EC /* MainMenuController.swift */; };
 		56FFAFA02679B6C30087D5EC /* icons8-home-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9F2679B6C30087D5EC /* icons8-home-64.png */; };
-		56FFAFA4267D338A0087D5EC /* addFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAFA3267D338A0087D5EC /* addFieldController.swift */; };
 		56FFAFAB267D34860087D5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAFAA267D34860087D5EC /* Main.storyboard */; };
 		BE3129F72C263B5FEE0BB0F5 /* Pods_PiCKUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.release.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.release.xcconfig"; sourceTree = "<group>"; };
+		5618087626AC907700480A2E /* addFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addFieldController.swift; path = ../../../../.Trash/addFieldController.swift; sourceTree = "<group>"; };
+		561808A026AF7D1800480A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		561808A126AF7D1800480A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		561FE4E6266D318300E117D0 /* PiCKUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiCKUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		561FE4E9266D318300E117D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		561FE4EB266D318300E117D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56FFAF9D267411CB0087D5EC /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		56FFAF9F2679B6C30087D5EC /* icons8-home-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-home-64.png"; path = "../../../Downloads/icons8-home-64.png"; sourceTree = "<group>"; };
-		56FFAFA3267D338A0087D5EC /* addFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFieldController.swift; sourceTree = "<group>"; };
 		56FFAFAA267D34860087D5EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		B771C6C08CDB83A5BB8FEF86 /* Pods_PiCKUP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiCKUP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FF5F497D04E01C66A9ABA0 /* Pods-PiCKUP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.debug.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +69,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5618087826AF7C1100480A2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		561FE4DD266D318300E117D0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +97,7 @@
 		561FE4E8266D318300E117D0 /* PiCKUP */ = {
 			isa = PBXGroup;
 			children = (
-				56FFAFA6267D33C80087D5EC /* Delegates */,
+				5618087826AF7C1100480A2E /* Views */,
 				56FFAFA5267D33A50087D5EC /* Controller */,
 				561FE4F2266D318400E117D0 /* Assets.xcassets */,
 				56FFAFAA267D34860087D5EC /* Main.storyboard */,
@@ -98,6 +105,8 @@
 				561FE4F7266D318400E117D0 /* Info.plist */,
 				56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */,
 				562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */,
+				561808A026AF7D1800480A2E /* AppDelegate.swift */,
+				561808A126AF7D1800480A2E /* SceneDelegate.swift */,
 			);
 			path = PiCKUP;
 			sourceTree = "<group>";
@@ -106,20 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				56FFAF9D267411CB0087D5EC /* MainMenuController.swift */,
-				56FFAFA3267D338A0087D5EC /* addFieldController.swift */,
+				5618087626AC907700480A2E /* addFieldController.swift */,
 				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
 				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		56FFAFA6267D33C80087D5EC /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				561FE4EB266D318300E117D0 /* SceneDelegate.swift */,
-				561FE4E9266D318300E117D0 /* AppDelegate.swift */,
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +240,10 @@
 			files = (
 				56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */,
 				56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */,
-				561FE4EA266D318300E117D0 /* AppDelegate.swift in Sources */,
-				561FE4EC266D318300E117D0 /* SceneDelegate.swift in Sources */,
-				56FFAFA4267D338A0087D5EC /* addFieldController.swift in Sources */,
+				5618087726AC907700480A2E /* addFieldController.swift in Sources */,
+				561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */,
 				56FFAF9E267411CB0087D5EC /* MainMenuController.swift in Sources */,
+				561808A326AF7D5A00480A2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
