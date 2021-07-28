@@ -19,7 +19,6 @@ class MainMenu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-        
     }
     
     func setupLocationManager() {
