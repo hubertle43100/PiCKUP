@@ -25,6 +25,7 @@
 		5618087626AC907700480A2E /* addFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addFieldController.swift; path = ../../../../.Trash/addFieldController.swift; sourceTree = "<group>"; };
 		561808A026AF7D1800480A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561808A126AF7D1800480A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		561808A426B4E6D600480A2E /* TestingGithub.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGithub.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		561FE4E6266D318300E117D0 /* PiCKUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiCKUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */,
 				561808A026AF7D1800480A2E /* AppDelegate.swift */,
 				561808A126AF7D1800480A2E /* SceneDelegate.swift */,
+				561808A426B4E6D600480A2E /* TestingGithub.playground */,
 			);
 			path = PiCKUP;
 			sourceTree = "<group>";
