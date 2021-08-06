@@ -44,6 +44,8 @@ class MainMenu: UIViewController {
     
     func checkLocationAuthorization(){
         switch CLLocationManager.authorizationStatus() {
+        
+        //case - decision user chose when presented with (allow)location?
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
             centerViewOnUserLocation()
