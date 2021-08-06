@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5618087726AC907700480A2E /* addFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5618087626AC907700480A2E /* addFieldController.swift */; };
+		5618087726AC907700480A2E /* AddFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5618087626AC907700480A2E /* AddFieldController.swift */; };
 		561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A026AF7D1800480A2E /* AppDelegate.swift */; };
 		561808A326AF7D5A00480A2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A126AF7D1800480A2E /* SceneDelegate.swift */; };
 		561808A626BCE44B00480A2E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A526BCE44B00480A2E /* ProfileViewController.swift */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.release.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.release.xcconfig"; sourceTree = "<group>"; };
-		5618087626AC907700480A2E /* addFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addFieldController.swift; path = ../../../../.Trash/addFieldController.swift; sourceTree = "<group>"; };
+		5618087626AC907700480A2E /* AddFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFieldController.swift; path = ../../../../.Trash/AddFieldController.swift; sourceTree = "<group>"; };
 		561808A026AF7D1800480A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561808A126AF7D1800480A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		561808A426B4E6D600480A2E /* TestingGithub.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGithub.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				56FFAF9D267411CB0087D5EC /* MainMenuController.swift */,
-				5618087626AC907700480A2E /* addFieldController.swift */,
+				5618087626AC907700480A2E /* AddFieldController.swift */,
 				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
 				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
 				561808A526BCE44B00480A2E /* ProfileViewController.swift */,
@@ -241,7 +241,7 @@
 			files = (
 				56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */,
 				56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */,
-				5618087726AC907700480A2E /* addFieldController.swift in Sources */,
+				5618087726AC907700480A2E /* AddFieldController.swift in Sources */,
 				561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */,
 				561808A626BCE44B00480A2E /* ProfileViewController.swift in Sources */,
 				56FFAF9E267411CB0087D5EC /* MainMenuController.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ProfileViewController: UIViewController , UITextFieldDelegate{
     
@@ -14,14 +15,26 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     
+    let database = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(nameTextField)
         nameTextField.delegate = self
         ageTextField.delegate = self
         bioTextField.delegate = self
         
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.clipsToBounds = true
+        
+        let docRef = database.document("PiCKUP/profile")
+        docRef.getDocument { snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            
+            print(data)
+        }
     }
     func dismiss() {
         self.dismiss(animated:true)
@@ -33,7 +46,15 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if let text = nameTextField.text, !text.isEmpty {
+            saveData(text: text)
+        }
         return true
+    }
+    
+    func saveData(text: String) {
+        let docRef = database.document("PiCKUP/profile")
+        docRef.setData(["text": text])
     }
     
     @IBAction func didTapButton(_ sender: UIButton) {
