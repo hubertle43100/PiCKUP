@@ -15,11 +15,22 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     
-    let database = Firestore.firestore()
+    let ageNumber = [1...100]
+    var pickerView = UIPickerView()
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        ageTextField.inputView = pickerView
+        
         view.addSubview(nameTextField)
+        view.addSubview(ageTextField)
+        
         nameTextField.delegate = self
         ageTextField.delegate = self
         bioTextField.delegate = self
@@ -27,7 +38,7 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.clipsToBounds = true
         
-        let docRef = database.document("PiCKUP/profile")
+        let docRef = db.document("PiCKUP/profile")
         docRef.getDocument { snapshot, error in
             guard let data = snapshot?.data(), error == nil else {
                 return
@@ -36,27 +47,36 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
             print(data)
         }
     }
+
+// ----- keyboard -----
     func dismiss() {
         self.dismiss(animated:true)
     }
-    //WARNING: wrote this all right but taping else where to dissmiss is difficult
+    //!: wrote this all right but taping else where to dissmiss is difficult
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if let text = nameTextField.text, !text.isEmpty {
-            saveData(text: text)
-        }
         return true
     }
     
-    func saveData(text: String) {
-        let docRef = database.document("PiCKUP/profile")
-        docRef.setData(["text": text])
+// ----- Firebase -----
+    func saveData(text: String, age: String, bio: String) {
+        let docRef = db.document("PiCKUP/profile")
+        docRef.setData(["Name": text, "Age": age, "Bio": bio])
     }
     
+    @IBAction func saveButton(_ sender: UIButton) {
+        if let name = nameTextField.text,
+           let age = ageTextField.text,
+           let bio = bioTextField.text,
+           !name.isEmpty {
+            saveData(text: name, age: age , bio: bio)
+        }
+    }
+// ----- Profile pic ------
     @IBAction func didTapButton(_ sender: UIButton) {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -66,7 +86,26 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
     }
 }
 
-extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 100
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row + 1)
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        ageTextField.text = String(row + 1)
+        ageTextField.resignFirstResponder()
+        
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //print("\(info)")
         
