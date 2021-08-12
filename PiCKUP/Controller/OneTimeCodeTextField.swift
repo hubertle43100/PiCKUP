@@ -9,9 +9,19 @@ import UIKit
 
 class OneTimeCodeTextField: UITextField {
     
+    var didEnterLastDigit: ((String) -> Void)?
+    
+    var defaultCharacter = "-"
+    
     private var isConfigured = false
     
     private var digitLabels = [UILabel]()
+    
+    private lazy var tapRecognizer: UITapGestureRecognizer = {
+        let recognizer = UITapGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(becomeFirstResponder))
+        return recognizer
+    }()
     
     func configure(with slotCount: Int = 6) {
         guard isConfigured == false else {return}
@@ -21,6 +31,8 @@ class OneTimeCodeTextField: UITextField {
         
         let labelsStackView = createLabelsStackView(with: slotCount)
         addSubview(labelsStackView)
+        
+        addGestureRecognizer(tapRecognizer)
         
         NSLayoutConstraint.activate([
             labelsStackView.topAnchor.constraint(equalTo: topAnchor),
@@ -35,6 +47,9 @@ class OneTimeCodeTextField: UITextField {
         textColor = .clear
         keyboardType = .numberPad
         textContentType = .oneTimeCode
+        
+        addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        delegate = self
     }
     
     private func createLabelsStackView(with count: Int) -> UIStackView {
@@ -50,7 +65,8 @@ class OneTimeCodeTextField: UITextField {
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
             label.font = .systemFont(ofSize: 40)
-            label.backgroundColor = .blue
+            label.isUserInteractionEnabled = true
+            label.text = defaultCharacter
             
             stackView.addArrangedSubview(label)
             
@@ -58,5 +74,32 @@ class OneTimeCodeTextField: UITextField {
         }
         
         return stackView
+    }
+    @objc
+    private func textDidChange() {
+        guard let text = self.text, text.count <= digitLabels.count else {return}
+        
+        for i in 0 ..< digitLabels.count {
+            let currentLabel = digitLabels[i]
+            
+            if i < text.count {
+                let index = text.index(text.startIndex, offsetBy: i)
+                currentLabel.text = String(text[index])
+            } else {
+                currentLabel.text = defaultCharacter
+            }
+        }
+        
+        if text.count == digitLabels.count {
+            didEnterLastDigit?(text)
+        }
+    }
+    
+}
+
+extension OneTimeCodeTextField: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let characterCount = textField.text?.count else {return false}
+        return characterCount < digitLabels.count || string == ""
     }
 }

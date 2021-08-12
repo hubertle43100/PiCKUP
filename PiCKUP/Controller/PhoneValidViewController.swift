@@ -15,5 +15,6 @@ class PhoneValidViewController: UIViewController {
         super.viewDidLoad()
         
         codeTextField.configure()
+        codeTextField.becomeFirstResponder()
     }
 }
