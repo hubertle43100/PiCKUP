@@ -49,9 +49,11 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
             print(data)
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    
+// ----- Phone Text Field -----
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
         if (textField == phoneTextField) {
@@ -94,20 +96,6 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
             return true
         }
     }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
-    }
 
 // ----- keyboard -----
     func dismiss() {
@@ -122,20 +110,34 @@ class ProfileViewController: UIViewController , UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
     
     
 // ----- Firebase -----
-    func saveData(text: String, age: String, bio: String) {
+    func saveData(text: String, age: String, bio: String, phone: String) {
         let docRef = db.document("PiCKUP/profile")
-        docRef.setData(["Name": text, "Age": age, "Bio": bio])
+        docRef.setData(["Name": text, "Age": age, "Bio": bio, "Phone": phone])
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
         if let name = nameTextField.text,
            let age = ageTextField.text,
            let bio = bioTextField.text,
+           let phone = phoneTextField.text,
            !name.isEmpty {
-            saveData(text: name, age: age , bio: bio)
+            saveData(text: name, age: age , bio: bio, phone: phone)
         }
     }
 // ----- Profile ------

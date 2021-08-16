@@ -94,7 +94,6 @@ class OneTimeCodeTextField: UITextField {
             didEnterLastDigit?(text)
         }
     }
-    
 }
 
 extension OneTimeCodeTextField: UITextFieldDelegate {
