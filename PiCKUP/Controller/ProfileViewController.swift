@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseFirestore
 
-class ProfileViewController: UIViewController , UITextFieldDelegate{
+class ProfileViewController: UIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
