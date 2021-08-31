@@ -10,13 +10,12 @@
 		561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A026AF7D1800480A2E /* AppDelegate.swift */; };
 		561808A326AF7D5A00480A2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A126AF7D1800480A2E /* SceneDelegate.swift */; };
 		561808A626BCE44B00480A2E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A526BCE44B00480A2E /* ProfileViewController.swift */; };
-		561808AA26C09D4900480A2E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808A926C09D4900480A2E /* LocationViewController.swift */; };
 		561808AC26C2ECF100480A2E /* PhoneValidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808AB26C2ECF100480A2E /* PhoneValidViewController.swift */; };
 		561808B026C2EDAF00480A2E /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561808AF26C2EDAF00480A2E /* OneTimeCodeTextField.swift */; };
 		561808B626C5E54A00480A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561808B526C5E54A00480A2E /* Main.storyboard */; };
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
-		5627FCE726D7381300468F7E /* AddFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627FCE626D7381300468F7E /* AddFieldController.swift */; };
 		562B0F4B268F8E9A00B46B7E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */; };
+		5650B42426DDA8CA00A7C2C0 /* LocationAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650B42326DDA8CA00A7C2C0 /* LocationAddController.swift */; };
 		56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF972672CE000087D5EC /* LoginViewController.swift */; };
 		56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF992672D27A0087D5EC /* RegisterViewController.swift */; };
 		56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */; };
@@ -30,15 +29,14 @@
 		561808A126AF7D1800480A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		561808A426B4E6D600480A2E /* TestingGithub.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGithub.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		561808A526BCE44B00480A2E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		561808A926C09D4900480A2E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		561808AB26C2ECF100480A2E /* PhoneValidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidViewController.swift; sourceTree = "<group>"; };
 		561808AF26C2EDAF00480A2E /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
 		561808B526C5E54A00480A2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Desktop/PiCKUP/Main.storyboard; sourceTree = "<group>"; };
 		561FE4E6266D318300E117D0 /* PiCKUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiCKUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5627FCE626D7381300468F7E /* AddFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFieldController.swift; sourceTree = "<group>"; };
 		562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5650B42326DDA8CA00A7C2C0 /* LocationAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddController.swift; sourceTree = "<group>"; };
 		56FFAF972672CE000087D5EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56FFAF992672D27A0087D5EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -118,17 +116,24 @@
 			path = PiCKUP;
 			sourceTree = "<group>";
 		};
+		5650B42226DCA16D00A7C2C0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				56FFAF9D267411CB0087D5EC /* MainMenuController.swift */,
+				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
+				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		56FFAFA5267D33A50087D5EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				56FFAF992672D27A0087D5EC /* RegisterViewController.swift */,
-				56FFAF972672CE000087D5EC /* LoginViewController.swift */,
-				56FFAF9D267411CB0087D5EC /* MainMenuController.swift */,
+				5650B42226DCA16D00A7C2C0 /* Main */,
 				561808A526BCE44B00480A2E /* ProfileViewController.swift */,
-				561808A926C09D4900480A2E /* LocationViewController.swift */,
 				561808AB26C2ECF100480A2E /* PhoneValidViewController.swift */,
 				561808AF26C2EDAF00480A2E /* OneTimeCodeTextField.swift */,
-				5627FCE626D7381300468F7E /* AddFieldController.swift */,
+				5650B42326DDA8CA00A7C2C0 /* LocationAddController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,11 +258,10 @@
 				561808A226AF7D5800480A2E /* AppDelegate.swift in Sources */,
 				561808A626BCE44B00480A2E /* ProfileViewController.swift in Sources */,
 				56FFAF9E267411CB0087D5EC /* MainMenuController.swift in Sources */,
+				5650B42426DDA8CA00A7C2C0 /* LocationAddController.swift in Sources */,
 				561808A326AF7D5A00480A2E /* SceneDelegate.swift in Sources */,
 				561808AC26C2ECF100480A2E /* PhoneValidViewController.swift in Sources */,
 				561808B026C2EDAF00480A2E /* OneTimeCodeTextField.swift in Sources */,
-				5627FCE726D7381300468F7E /* AddFieldController.swift in Sources */,
-				561808AA26C09D4900480A2E /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

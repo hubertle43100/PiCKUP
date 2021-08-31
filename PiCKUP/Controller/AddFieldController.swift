@@ -10,14 +10,13 @@ import FirebaseFirestore
 
 class AddFieldController: UIViewController {
     let db = Firestore.firestore()
-    
-    @IBOutlet weak var NameTextField: UILabel!
     @IBOutlet weak var LocationTextField: UITextField!
-    
+    @IBOutlet weak var NameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
     
     // ----- keyboard -----
         func dismiss() {
@@ -52,12 +51,12 @@ class AddFieldController: UIViewController {
             docRef.setData(["Name": text, "Location": location])
         }
     
-    @IBAction func saveButton(_ sender: UIButton) {
-        if let name = NameTextField
-           let locations = LocationTextField
-           !name.isEmpty {
-            saveData(text: name, location)
-        }
-    }
+//    @IBAction func saveButton(_ sender: UIButton) {
+//        if let name = NameTextField,
+//           let locations = LocationTextField,
+//           !name.isEmpty {
+//            saveData(text: name, location: locations)
+//        }
+//    }
         
 }
