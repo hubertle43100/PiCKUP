@@ -15,8 +15,7 @@ class LocationAddController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     
     let locationManager = CLLocationManager()
-    let regionInMeter: Double = 10000
-    
+    let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
     
     override func viewDidLoad() {
@@ -24,49 +23,58 @@ class LocationAddController: UIViewController {
         checkLocationServices()
     }
     
+    
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
+    
     
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            
+            // Show alert letting the user know they have to turn this on.
         }
     }
     
-    func checkLocationAuthorization(){
+    
+    func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
-        //case - decision user chose when presented with (allow)location?
         case .authorizedWhenInUse:
-            startTrackingUserLocation()
+            startTackingUserLocation()
         case .denied:
+            // Show alert instructing them how to turn on permissions
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
+            // Show an alert letting them know what's up
             break
         case .authorizedAlways:
+            break
+        @unknown default:
             break
         }
     }
     
-    func startTrackingUserLocation() {
+    
+    func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
+    
     
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude = mapView.centerCoordinate.latitude
@@ -74,41 +82,42 @@ class LocationAddController: UIViewController {
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
-
+    
 }
 
+
 extension LocationAddController: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.last else { return }
-//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
-//    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
-    
 }
 
+
 extension LocationAddController: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
         let geoCoder = CLGeocoder()
         
-        guard let previousLocation = self.previousLocation else {return}
+        guard let previousLocation = self.previousLocation else { return }
         
-        guard center.distance(from: previousLocation) > 50 else {return}
+        guard center.distance(from: previousLocation) > 50 else { return }
         self.previousLocation = center
         
         geoCoder.reverseGeocodeLocation(center) { [weak self] (placemarks, error) in
-            guard let self = self else {return}
+            guard let self = self else { return }
             
             if let _ = error {
+                //TODO: Show alert informing the user
                 return
             }
+            
             guard let placemark = placemarks?.first else {
+                //TODO: Show alert informing the user
                 return
             }
+            
             let streetNumber = placemark.subThoroughfare ?? ""
             let streetName = placemark.thoroughfare ?? ""
             
