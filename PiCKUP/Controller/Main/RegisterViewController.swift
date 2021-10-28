@@ -32,6 +32,7 @@ class ResgisterViewController: UIViewController {
         resigterUser()
     }
     
+    
     func resigterUser() {
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { authResult, error in
             guard let user = authResult?.user, error == nil else {

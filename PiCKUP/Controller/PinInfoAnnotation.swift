@@ -24,21 +24,21 @@ class PinInfoAnnotations{
         annotations.append(annotation)
         
         //Sand Hill Fields
-        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.4324188,-122.1860571), title: "Chicago Deep Dish", subtitle: "SATURDAY: 9am - 11am")
+        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.4324188,-122.1860571), title: "Sand Hill Fields", subtitle: "SATURDAY: 9am - 11am")
         annotation.pinPhoto = #imageLiteral(resourceName: "SandHill")
-        annotation.historyText = "Light and dark shirts is recommended. "
+        annotation.historyText = "Bring two shirts light and dark please. If we get enough players to come then we would use full goals provided. Some players in the past have trouble finding the field so to clarify the location a bit, you can simply look for the Standford hospital in Menlo Park. The soccer field is directly behind it so you should not miss it. Looking forward to playing with you. "
         annotations.append(annotation)
         
         //Monte Vista HS
-        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.31555,-122.0569311), title: "Hawaiian/Canandian Pizza", subtitle: "SUNDAY: 1:30pm - 4:30pm")
+        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.31555,-122.0569311), title: "Monte Vista HS", subtitle: "SUNDAY: 1:30pm - 4:30pm")
         annotation.pinPhoto = #imageLiteral(resourceName: "MonteVista")
-        annotation.historyText = "The so-called Hawaiian pizza is not Hawaiian -- It's Canadian. Greek immigrant  to Canada Sam Panopoulos added canned pineapple and Canadian bacon to a pizza in his small restaurant in Chatham, Canada. This is the one of the earliest pizzas without traditional Italian ingredients. As late as 2017, a few months before Panopoulos' death this was controversial, with purists angry about pineapple on a pizza. The president of Iceland started a near diplomatic incident between Canada and Iceland with his statement he would make pineapple on Pizza illegal if he could, with Canadians up in arms about their treasure."
+        annotation.historyText = "TURF! TURF! TURF! We tend to get some younger players here so expect the pace of the game to be a bit fast. REMINDER: bring light/dark shirts."
         annotations.append(annotation)
         
         //Lynbrook HS
-        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.31555,-122.0569311), title: "Hawaiian/Canandian Pizza", subtitle: "SUNDAY: 1:30pm - 4:30pm")
+        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.31555,-122.0569311), title: "Lynbrook HS", subtitle: "SUNDAY: 1:30pm - 4:30pm")
         annotation.pinPhoto = #imageLiteral(resourceName: "MonteVista")
-        annotation.historyText = "The so-called Hawaiian pizza is not Hawaiian -- It's Canadian. Greek immigrant  to Canada Sam Panopoulos added canned pineapple and Canadian bacon to a pizza in his small restaurant in Chatham, Canada. This is the one of the earliest pizzas without traditional Italian ingredients. As late as 2017, a few months before Panopoulos' death this was controversial, with purists angry about pineapple on a pizza. The president of Iceland started a near diplomatic incident between Canada and Iceland with his statement he would make pineapple on Pizza illegal if he could, with Canadians up in arms about their treasure."
+        annotation.historyText = "Short field turf field games here. Get ready to get the exercise of your life because we play like it's indoor soccer. Have fun and bring balls if you can. Thanks!"
         annotations.append(annotation)
         
     }
