@@ -9,9 +9,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MainMenuController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MainMenuController: UIViewController {
     
-    var coordinate2D = CLLocationCoordinate2DMake(40.8367321,14.2468856)
+    var coordinate2D = CLLocationCoordinate2DMake(37.2970523,-121.9574964) //San Jose
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -20,20 +20,22 @@ class MainMenuController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkLocationServices()
+        checkLocationAuthorization()
+        mapView.delegate = self
         mapView.addAnnotations(PinInfoAnnotations().annotations)
-        updateMapRegion(rangeSpan: 100)
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //updateMapRegion(rangeSpan: 20000) //Center camera in SJ
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
+extension MainMenuController: CLLocationManagerDelegate {
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
@@ -44,42 +46,6 @@ class MainMenuController: UIViewController, MKMapViewDelegate, CLLocationManager
         let region = MKCoordinateRegion(center: coordinate2D, latitudinalMeters: rangeSpan, longitudinalMeters: rangeSpan)
         mapView.region = region
     }
-    
-    func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
-            
-        }
-    }
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        var annotationView = MKAnnotationView()
-        guard let annotation = annotation as? PinAnnotation
-        else{
-                return nil
-        }
-        if let dequedView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier) {
-            annotationView = dequedView
-        } else {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotation.identifier)
-        }
-        //annotationView.pinTintColor = UIColor.blue
-        annotationView.image = UIImage(named: "pizza pin")
-        annotationView.canShowCallout = true
-        let paragraph = UILabel()
-        paragraph.numberOfLines = 0
-        paragraph.font = UIFont.preferredFont(forTextStyle: .caption1)
-        paragraph.text = annotation.subtitle
-        paragraph.numberOfLines = 1
-        paragraph.adjustsFontSizeToFitWidth = true
-        annotationView.detailCalloutAccessoryView = paragraph
-        annotationView.leftCalloutAccessoryView = UIImageView(image: annotation.pinPhoto)
-        annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
-        return annotationView
-    }
-    
-    
     func checkLocationAuthorization(){
         switch CLLocationManager.authorizationStatus() {
         //case - decision user chose when presented with (allow)location?
@@ -97,17 +63,46 @@ class MainMenuController: UIViewController, MKMapViewDelegate, CLLocationManager
         case .authorizedAlways:
             break
         @unknown default:
-            centerViewOnUserLocation()
-        }
+            centerViewOnUserLocation()}
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
+        _ = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
-
 }
+extension MainMenuController: MKMapViewDelegate {
+    //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    //        var annotationView = MKAnnotationView()
+    //        guard let annotation = annotation as? PinAnnotation
+    //        else{
+    //                return nil
+    //        }
+    //        if let dequedView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier) {
+    //            annotationView = dequedView
+    //        } else {
+    //            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotation.identifier)
+    //        }
+    //        annotationView.canShowCallout = true
+    //        let paragraph = UILabel()
+    //        paragraph.numberOfLines = 0
+    //        paragraph.font = UIFont.preferredFont(forTextStyle: .caption1)
+    //        paragraph.text = annotation.subtitle
+    //        paragraph.numberOfLines = 1
+    //        paragraph.adjustsFontSizeToFitWidth = true
+    //        annotationView.detailCalloutAccessoryView = paragraph
+    //        annotationView.leftCalloutAccessoryView = UIImageView(image: annotation.pinPhoto)
+    //        annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
+    //        return annotationView
+    //    }
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            let vc = AnnotationDetailViewController(nibName: "AnnotationDetailViewController", bundle: nil)
+            vc.annotation = (view.annotation as! PinAnnotation)
+            present(vc, animated: true, completion: nil)
+        }
+}
+

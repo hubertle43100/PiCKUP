@@ -12,7 +12,7 @@ class PinInfoAnnotations{
     var annotations:[PinAnnotation] = []
     init(){
         //Creekside Park
-        var annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.3164, 122.0158), title: "Creekside Park", subtitle: "SUNDAY: 2pm - 5pm")
+        var annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.313634,-121.985519), title: "Creekside Park", subtitle: "SUNDAY: 2pm - 5pm")
         annotation.pinPhoto = #imageLiteral(resourceName: "Creekside.jpeg")
         annotation.historyText = "When you enter the park, you can see us with the big orange goals. The condition of the field is quite bumpy so do not expect quality ball play. We bring good amount of donated water and sometimes gatorade but more donations is appreciated. We play from 2pm to 5pm and make sure to bring two shirts one white and black(light and dark)"
         self.annotations.append(annotation)
@@ -36,7 +36,7 @@ class PinInfoAnnotations{
         annotations.append(annotation)
         
         //Lynbrook HS
-        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.31555,-122.0569311), title: "Lynbrook HS", subtitle: "SUNDAY: 1:30pm - 4:30pm")
+        annotation = PinAnnotation( coordinate: CLLocationCoordinate2DMake(37.3006079,-122.0069019), title: "Lynbrook HS", subtitle: "SUNDAY: 1:30pm - 4:30pm")
         annotation.pinPhoto = #imageLiteral(resourceName: "MonteVista")
         annotation.historyText = "Short field turf field games here. Get ready to get the exercise of your life because we play like it's indoor soccer. Have fun and bring balls if you can. Thanks!"
         annotations.append(annotation)
