@@ -15,10 +15,10 @@
 		561808B626C5E54A00480A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561808B526C5E54A00480A2E /* Main.storyboard */; };
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
 		562B0F4B268F8E9A00B46B7E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */; };
+		564BA534272B526C00B9BCC8 /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564BA533272B526C00B9BCC8 /* AnnotationDetailViewController.xib */; };
 		56DA5C9A271F7F0800C00C96 /* PinInfoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5C99271F7F0800C00C96 /* PinInfoAnnotation.swift */; };
 		56DA5C9C271F7F2E00C00C96 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5C9B271F7F2E00C00C96 /* PinAnnotation.swift */; };
 		56DA5CA6272A83A400C00C96 /* AnnotationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5CA5272A83A400C00C96 /* AnnotationDetailViewController.swift */; };
-		56DA5CA9272A86AC00C00C96 /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56DA5CA8272A86AC00C00C96 /* AnnotationDetailViewController.xib */; };
 		56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF972672CE000087D5EC /* LoginViewController.swift */; };
 		56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFAF992672D27A0087D5EC /* RegisterViewController.swift */; };
 		56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */; };
@@ -30,7 +30,6 @@
 		36E2318E000424318C773D58 /* Pods-PiCKUP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiCKUP.release.xcconfig"; path = "Target Support Files/Pods-PiCKUP/Pods-PiCKUP.release.xcconfig"; sourceTree = "<group>"; };
 		561808A026AF7D1800480A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561808A126AF7D1800480A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		561808A426B4E6D600480A2E /* TestingGithub.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGithub.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		561808A526BCE44B00480A2E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		561808AB26C2ECF100480A2E /* PhoneValidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidViewController.swift; sourceTree = "<group>"; };
 		561808AF26C2EDAF00480A2E /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
@@ -39,10 +38,10 @@
 		561FE4F2266D318400E117D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		564BA533272B526C00B9BCC8 /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
 		56DA5C99271F7F0800C00C96 /* PinInfoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInfoAnnotation.swift; sourceTree = "<group>"; };
 		56DA5C9B271F7F2E00C00C96 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		56DA5CA5272A83A400C00C96 /* AnnotationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailViewController.swift; sourceTree = "<group>"; };
-		56DA5CA8272A86AC00C00C96 /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
 		56FFAF972672CE000087D5EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56FFAF992672D27A0087D5EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -112,13 +111,12 @@
 				56FFAFA5267D33A50087D5EC /* Controller */,
 				561FE4F2266D318400E117D0 /* Assets.xcassets */,
 				561808B526C5E54A00480A2E /* Main.storyboard */,
+				564BA533272B526C00B9BCC8 /* AnnotationDetailViewController.xib */,
 				561FE4F7266D318400E117D0 /* Info.plist */,
 				56FFAF9B2672D3EE0087D5EC /* GoogleService-Info.plist */,
-				56DA5CA8272A86AC00C00C96 /* AnnotationDetailViewController.xib */,
 				562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */,
 				561808A026AF7D1800480A2E /* AppDelegate.swift */,
 				561808A126AF7D1800480A2E /* SceneDelegate.swift */,
-				561808A426B4E6D600480A2E /* TestingGithub.playground */,
 			);
 			path = PiCKUP;
 			sourceTree = "<group>";
@@ -225,7 +223,7 @@
 				56FFAF9C2672D3EE0087D5EC /* GoogleService-Info.plist in Resources */,
 				562B0F4B268F8E9A00B46B7E /* Launch Screen.storyboard in Resources */,
 				561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */,
-				56DA5CA9272A86AC00C00C96 /* AnnotationDetailViewController.xib in Resources */,
+				564BA534272B526C00B9BCC8 /* AnnotationDetailViewController.xib in Resources */,
 				561808B626C5E54A00480A2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

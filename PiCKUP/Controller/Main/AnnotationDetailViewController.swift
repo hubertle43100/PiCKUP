@@ -9,6 +9,7 @@ import UIKit
 
 class AnnotationDetailViewController: UIViewController {
     var annotation: PinAnnotation!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pinPhoto: UIImageView!
     @IBOutlet weak var historyText: UITextView!
@@ -22,7 +23,6 @@ class AnnotationDetailViewController: UIViewController {
         titleLabel.text = annotation.title
         pinPhoto.image = annotation.pinPhoto
         historyText.text = annotation.historyText
-        // Do any additional setup after loading the view.
     }
 
     

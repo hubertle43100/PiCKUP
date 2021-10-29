@@ -76,6 +76,33 @@ extension MainMenuController: CLLocationManagerDelegate {
     }
 }
 extension MainMenuController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is PinAnnotation else { return nil }
+        
+        let identifier = "PinAnnotation"
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            
+            
+            let btn = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = btn
+        } else {
+            annotationView?.annotation = annotation
+        }
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let vc = AnnotationDetailViewController(nibName: "AnnotationDetailViewController", bundle: nil)
+                    vc.annotation = (view.annotation as! PinAnnotation)
+                    present(vc, animated: true, completion: nil)
+    }
+    
+    
     //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     //        var annotationView = MKAnnotationView()
     //        guard let annotation = annotation as? PinAnnotation
@@ -99,10 +126,5 @@ extension MainMenuController: MKMapViewDelegate {
     //        annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
     //        return annotationView
     //    }
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-            let vc = AnnotationDetailViewController(nibName: "AnnotationDetailViewController", bundle: nil)
-            vc.annotation = (view.annotation as! PinAnnotation)
-            present(vc, animated: true, completion: nil)
-        }
 }
 
