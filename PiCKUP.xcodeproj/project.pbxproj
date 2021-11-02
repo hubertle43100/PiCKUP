@@ -16,6 +16,7 @@
 		561FE4F3266D318400E117D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561FE4F2266D318400E117D0 /* Assets.xcassets */; };
 		562B0F4B268F8E9A00B46B7E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */; };
 		564BA534272B526C00B9BCC8 /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564BA533272B526C00B9BCC8 /* AnnotationDetailViewController.xib */; };
+		564BA5372731095F00B9BCC8 /* AddNewFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564BA5362731095F00B9BCC8 /* AddNewFieldViewController.swift */; };
 		56DA5C9A271F7F0800C00C96 /* PinInfoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5C99271F7F0800C00C96 /* PinInfoAnnotation.swift */; };
 		56DA5C9C271F7F2E00C00C96 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5C9B271F7F2E00C00C96 /* PinAnnotation.swift */; };
 		56DA5CA6272A83A400C00C96 /* AnnotationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA5CA5272A83A400C00C96 /* AnnotationDetailViewController.swift */; };
@@ -39,6 +40,7 @@
 		561FE4F7266D318400E117D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		562B0F4A268F8E9A00B46B7E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		564BA533272B526C00B9BCC8 /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
+		564BA5362731095F00B9BCC8 /* AddNewFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFieldViewController.swift; sourceTree = "<group>"; };
 		56DA5C99271F7F0800C00C96 /* PinInfoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInfoAnnotation.swift; sourceTree = "<group>"; };
 		56DA5C9B271F7F2E00C00C96 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		56DA5CA5272A83A400C00C96 /* AnnotationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = PiCKUP;
 			sourceTree = "<group>";
 		};
+		564BA5352731093700B9BCC8 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				564BA5362731095F00B9BCC8 /* AddNewFieldViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		5650B42226DCA16D00A7C2C0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +145,9 @@
 		56DA5CA4272A825700C00C96 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				561808A526BCE44B00480A2E /* ProfileViewController.swift */,
 				561808AB26C2ECF100480A2E /* PhoneValidViewController.swift */,
 				561808AF26C2EDAF00480A2E /* OneTimeCodeTextField.swift */,
-				561808A526BCE44B00480A2E /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -156,6 +166,7 @@
 			children = (
 				56DA5CA7272A83B600C00C96 /* Login */,
 				5650B42226DCA16D00A7C2C0 /* Main */,
+				564BA5352731093700B9BCC8 /* Add */,
 				56DA5CA4272A825700C00C96 /* Profile */,
 			);
 			path = Controller;
@@ -277,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564BA5372731095F00B9BCC8 /* AddNewFieldViewController.swift in Sources */,
 				56FFAF982672CE000087D5EC /* LoginViewController.swift in Sources */,
 				56DA5C9A271F7F0800C00C96 /* PinInfoAnnotation.swift in Sources */,
 				56FFAF9A2672D27A0087D5EC /* RegisterViewController.swift in Sources */,

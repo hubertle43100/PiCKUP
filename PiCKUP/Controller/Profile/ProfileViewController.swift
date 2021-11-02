@@ -40,18 +40,27 @@ class ProfileViewController: UIViewController , UITextFieldDelegate {
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.clipsToBounds = true
         
+        
         let docRef = db.document("PiCKUP/profile")
-        docRef.getDocument { snapshot, error in
-            guard let data = snapshot?.data(), error == nil else {
-                return
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                _ = document.data().map(String.init(describing:)) ?? "nil"
+                self.nameTextField.text = "Hubert"
+                self.ageTextField.text = "21"
+                self.bioTextField.text = "Making apps is too hard"
+                self.phoneTextField.text = "(108)808-5274"
+            } else {
+                print("Document does not exist")
             }
-            
-            print(data)
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        
     }
+    
+    
     
 // ----- Phone Text Field -----
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
