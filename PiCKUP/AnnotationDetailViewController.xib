@@ -24,8 +24,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PhL-Jj-6z8">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-oj-Npo">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-oj-Npo">
                             <rect key="frame" x="8" y="160" width="398" height="398"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-Ma-mDm">
                             <rect key="frame" x="8" y="566" width="398" height="183"/>
@@ -55,10 +56,8 @@
                         <constraint firstItem="2do-Bx-P1t" firstAttribute="leading" secondItem="PhL-Jj-6z8" secondAttribute="leading" constant="8" id="0nW-PQ-CzC"/>
                         <constraint firstItem="2do-Bx-P1t" firstAttribute="leading" secondItem="PhL-Jj-6z8" secondAttribute="leading" constant="8" id="1Bg-5Q-agd"/>
                         <constraint firstAttribute="trailing" secondItem="2do-Bx-P1t" secondAttribute="trailing" constant="8" id="9Po-ho-BV6"/>
-                        <constraint firstAttribute="trailing" secondItem="6n6-oj-Npo" secondAttribute="trailing" constant="8" id="BCm-xa-xsB"/>
                         <constraint firstAttribute="bottom" secondItem="2do-Bx-P1t" secondAttribute="bottom" constant="109" id="DvU-Dc-YaJ"/>
                         <constraint firstAttribute="trailing" secondItem="2do-Bx-P1t" secondAttribute="trailing" constant="8" id="piX-8G-tYT"/>
-                        <constraint firstItem="6n6-oj-Npo" firstAttribute="leading" secondItem="PhL-Jj-6z8" secondAttribute="leading" constant="8" id="qgE-xV-MI0"/>
                     </constraints>
                 </view>
             </subviews>

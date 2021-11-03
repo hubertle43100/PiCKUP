@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseFirestore
+import Firebase
+import AVFoundation
 
 class ProfileViewController: UIViewController , UITextFieldDelegate {
     
@@ -20,6 +22,7 @@ class ProfileViewController: UIViewController , UITextFieldDelegate {
     var pickerView = UIPickerView()
     
     let db = Firestore.firestore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +45,14 @@ class ProfileViewController: UIViewController , UITextFieldDelegate {
         
         
         let docRef = db.document("PiCKUP/profile")
+        let profile = db.collection("profile")
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 _ = document.data().map(String.init(describing:)) ?? "nil"
                 self.nameTextField.text = "Hubert"
                 self.ageTextField.text = "21"
-                self.bioTextField.text = "Making apps is too hard"
+                self.bioTextField.text = "Working on PiCKUP"
                 self.phoneTextField.text = "(108)808-5274"
             } else {
                 print("Document does not exist")
@@ -157,6 +161,44 @@ class ProfileViewController: UIViewController , UITextFieldDelegate {
         vc.allowsEditing = true
         present(vc, animated: true)
     }
+    
+//    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
+//           guard let uid = Auth.auth().currentUser?.uid else { return }
+//           let storageRef = Storage.storage().reference().child("user/\(uid)")
+//
+//           guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
+//
+//
+//           let metaData = StorageMetadata()
+//           metaData.contentType = "image/jpg"
+//
+//           storageRef.putData(imageData, metadata: metaData) { metaData, error in
+//               if error == nil, metaData != nil {
+//                   if let url = metaData?.downloadURL() {
+//                       completion(url)
+//                   } else {
+//                       completion(nil)
+//                   }
+//                   // success!
+//               } else {
+//                   // failed
+//                   completion(nil)
+//               }
+//           }
+//       }
+    func saveProfile(username:String, profileImageURL:URL, completion: @escaping ((_ success:Bool)->())) {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+            
+            let userObject = [
+                "username": username,
+                "photoURL": profileImageURL.absoluteString
+            ] as [String:Any]
+            
+            databaseRef.setValue(userObject) { error, ref in
+                completion(error == nil)
+            }
+        }
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
